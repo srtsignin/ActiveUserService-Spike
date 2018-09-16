@@ -2,35 +2,39 @@
 A temporary substitute for the ActiveUserService
 
 GET /
+
 **Response:**
 
-```json
+```js
 {
     'activeUsers': list(active_users)
 }
 ```
 
 POST /
+
 **Body:**
-```json
+
+```js
 {
-    user: <username>
+    'user': '<username>'
 }
 ```
 
 **Response:**
 
-```json
+```js
 {
-    'userAdded': <username>,
+    'userAdded': '<username>',
     'activeUsers': list(active_users)
 }
 ```
 
 DELETE /
+
 **Response:**
 
-```json
+```js
 {
     'result': 'Success',
     'activeUsers': list(active_users)
