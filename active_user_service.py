@@ -15,8 +15,8 @@ def handle_request():
         }
         return json.dumps(response)
     if request.method == 'POST':
-        active_users.add(request.form.get('user'))
-        user = request.form.get('user')
+        user = json.loads(request.data)['user']
+        active_users.add(user)
         response = {
             'userAdded': user,
             'activeUsers': list(active_users)
